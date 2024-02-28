@@ -99,24 +99,24 @@ yearsUntilRetirement(1991, "Jonas");
 yearsUntilRetirement(2010, "Mike");
 yearsUntilRetirement(1950, "Sam");
 
-*/
 const calcAverage = (scoreA, scoreB, scoreC) => (scoreA + scoreB + scoreC) / 3;
 
 const scoreDolphins = calcAverage(85, 54, 41);
 const scoreKoalas = calcAverage(23, 34, 27);
 
 const checkWinner = function (avgDolphins, avgKoalas) {
-  if (avgDolphins > 2 * avgKoalas) {
+  if (avgDolphins >= 2 * avgKoalas) {
     console.log(
       `The winner is team Dolphins with an average of ${avgDolphins} points to ${avgKoalas} for team Koalas`
-    );
-  } else if (avgKoalas > 2 * avgDolphins) {
-    console.log(
-      `The winner is team Koalas with an average of ${avgKoalas} points to ${avgDolphins} for team Dolphins`
-    );
-  } else {
-    console.log(`No team wins because the conditions for a win were not met`);
-  }
-};
-
-checkWinner(scoreDolphins, scoreKoalas);
+      );
+    } else if (avgKoalas >= 2 * avgDolphins) {
+      console.log(
+        `The winner is team Koalas with an average of ${avgKoalas} points to ${avgDolphins} for team Dolphins`
+        );
+      } else {
+        console.log(`No team wins because the conditions for a win were not met`);
+      }
+    };
+    
+    checkWinner(scoreDolphins, scoreKoalas);
+    */
