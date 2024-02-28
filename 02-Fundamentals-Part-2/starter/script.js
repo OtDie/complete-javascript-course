@@ -120,3 +120,6 @@ const checkWinner = function (avgDolphins, avgKoalas) {
     
     checkWinner(scoreDolphins, scoreKoalas);
     */
+
+const friend1 = "micheal";
+const friend2 = "Thomas";
