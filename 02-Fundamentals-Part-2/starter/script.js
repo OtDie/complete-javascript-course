@@ -211,20 +211,45 @@ const checkWinner = function (avgDolphins, avgKoalas) {
       friends: ["Micheal", "Peter", "Steven"],
     };
     
-    */
-
+    
+    const jonas = {
+      firstName: "Otto",
+      lastName: "Diekgerdes",
+      age: 2037 - 1991,
+      job: "graphic designer",
+      friends: ["Micheal", "Peter", "Steven"],
+    };
+    
+    console.log(jonas.lastName);
+    console.log(jonas["lastName"]);
+    
+    const nameKey = "Name";
+    console.log(jonas["first" + nameKey]);
+    console.log(jonas["last" + nameKey]);
+    
+    const interestedIn = prompt(
+      "What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends"
+      );
+      
+      if (jonas[interestedIn]) {
+        console.log(jonas[interestedIn]);
+      } else {
+        console.log(`Unfortunatly we don't know that about Jonas`);
+      }
+      
+      //add values to object:
+      jonas.location = "Portugal";
+      jonas["twitter"] = "@jonasschmedtman";
+      console.log(jonas);
+      */
 const jonas = {
-  firstName: "Otto",
-  lastName: "Diekgerdes",
+  firstName: "Jonas",
+  lastName: "Schmedtman",
   age: 2037 - 1991,
-  job: "graphic designer",
+  job: "teacher",
   friends: ["Micheal", "Peter", "Steven"],
 };
 
-console.log(jonas.lastName);
-console.log(jonas["lastName"]);
-
-const nameKey = "Name";
-console.log(jonas["first" + nameKey]);
-console.log(jonas["last" + nameKey]);
-gi;
+console.log(
+  `${jonas.firstName} has ${jonas.friends.length} friends and his best friend is called ${jonas.friends[0]}`
+);
