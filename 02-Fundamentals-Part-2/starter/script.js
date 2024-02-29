@@ -118,7 +118,11 @@ const checkWinner = function (avgDolphins, avgKoalas) {
       }
     };
     
+
     checkWinner(scoreDolphins, scoreKoalas);
+    
+    //Arrays
+    
     const friends = ["Micheal", "Steven", "Peter"];
     const years = new Array(1991, 1984, 2008, 2020);
     console.log(friends);
@@ -179,21 +183,48 @@ const checkWinner = function (avgDolphins, avgKoalas) {
     console.log(friends.includes("Steven"));
     console.log(friends.includes("Bob"));
     
+    
+    const calcTip = function (bill) {
+      return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+    };
+    
+    const bills = [125, 555, 44];
+    const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+    const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+    
+    console.log(bills, tips, total);
+    
+    //Objects
+    const jonasArray = [
+      "Jonas",
+      "Schmedtmann",
+      2037 - 1991,
+      "teacher",
+      ["Micheal", "Peter", "Steven"],
+    ];
+    
+    const jonasObject = {
+      firstName: "Otto",
+      lastName: "Diekgerdes",
+      age: 2037 - 1991,
+      job: "graphic designer",
+      friends: ["Micheal", "Peter", "Steven"],
+    };
+    
     */
 
-const calcTip = function (billAmount) {
-  if (billAmount >= 50 && billAmount <= 300) {
-    return billAmount * 0.15;
-  } else {
-    return billAmount * 0.2;
-  }
+const jonas = {
+  firstName: "Otto",
+  lastName: "Diekgerdes",
+  age: 2037 - 1991,
+  job: "graphic designer",
+  friends: ["Micheal", "Peter", "Steven"],
 };
 
-const bills = [125, 555, 44];
-console.log(bills);
+console.log(jonas.lastName);
+console.log(jonas["lastName"]);
 
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
-console.log(tips);
-
-const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
-console.log(total);
+const nameKey = "Name";
+console.log(jonas["first" + nameKey]);
+console.log(jonas["last" + nameKey]);
+gi;
